@@ -1,7 +1,4 @@
-Inlcude your source code in this folder. You can also include executables here as well. 
-
-Note: I made it so that the players are allowed to do multiple things per turn(end turn does not actually end turn)
-It's not that its a bug,the logic is in the server module,but this makes it easier to test when you're alone since you don't have to control multiple players yourself and since it is a prototype I felt that it would be better this way.
+Note: The game was rushed as this was for a project, I made commits for the last 2 or so days on a school repository, this is just an example of what I am capable of, the code was rushed for the most part especially for the client side (game.js) and some of the server side, but I may clean up the code from time to time whenever I have the time, I just didn't have time to clean it up as I wanted to make sure I had all the features I have on here currently, but I made sure it was at least working with minimal bugs. So overall, I think this was a success.
 
 Modules description:
 
@@ -16,8 +13,3 @@ Tile.js
 
 static/game.js
 - The client side, includes all displaying all visuals and logic for inputting runs/melds, updating joker, when to end turn, etc
-
-
-To run the code you will need to clone this part of the repository. 
-I used visual studio code, and when it is ran the link its running on should be http://localhost:5000/
-You may need to install some of the frameworks like express
