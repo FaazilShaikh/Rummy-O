@@ -1,13 +1,60 @@
 <html>
+  <style>
+   .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color:beige;
+  transition: 0.3s;
+  border-style: solid;
+  height:125px;
+  width:85px;
+  display:inline-block;
+ 
+}
+
+
+  .card:hover {
+  box-shadow: 0 12px 26px 0 rgba(0,0,0,0.2);
+  }
+</style>
   <head>
     <title>A Multiplayer Game</title>
     <script src="/socket.io/socket.io.js"></script>
   </head>
   <body>
-    <div id="msg"></div>
+    <div style ="text-align: center;">Melds</div>
+    <div id = "melds" style ="text-align: center;"></div>
     <br>
-    <div id = "buttons">
-    <button id = "test" >test</button>
+    <hr>
+    <div id = "cards"style ="text-align: center;" ></div>
+    <div id = "buttons" style ="text-align: center;">
+    <br>
+    <button id = "test" >Run/Meld Cards</button>
+    <button id = "existing">Meld to existing meld</button>
+    <button id = "end" >Draw Tile</button>
+    <br>
+    <button id = "replace" >Replace Joker</button>
+      <label></label>Value:</label>
+    <script>
+       var select = document.createElement("select")
+       select.id = "replaceval"
+      document.getElementById("buttons").insertBefore(select,document.getElementById("label"))
+      for(var i =1;i<14;i++){
+        var option = document.createElement("option")
+        option.innerHTML = i;
+        option.id = i;
+      select.appendChild(option)
+   
+      }
+    </script>
+     <label id ="label">Color:</label>
+     <select id = "replacecolor">
+       <option id="Black">Black</option> <option id="Red">Red</option>
+        <option id="Blue">Blue</option> <option id="Orange">Orange</option>
+     </select> 
+     <br><br>
+    <div id="msg"></div>
+    <div id="msg2"></div>
+    <div>Note: Currently allowed players to do mulitple things on a turn(Drawing won't actually end your turn), this is so you can test easily without having to control multiple players yourself</div>
   </div>
   </body>
   <script src="/static/game.js"></script>
